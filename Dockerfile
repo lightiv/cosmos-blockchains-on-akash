@@ -11,8 +11,8 @@ RUN apt-get update && apt-get install --no-install-recommends --assume-yes ca-ce
 
 RUN mkdir /node
 
-COPY ./althea-bin/app.toml /node/
-COPY ./althea-bin/config.toml /node/
+COPY app.toml /node/
+COPY config.toml /node/
 
 COPY run.sh /node/
 RUN chmod 555 /node/run.sh
