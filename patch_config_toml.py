@@ -41,7 +41,7 @@ with urllib.request.urlopen(seeds_url, timeout = timeout) as response:
 seeds = [y for y in (x.strip() for x in seeds_data.split("\n")) if len(y) != 0 ]
 
 data = toml.load(sys.stdin)
-data['moniker'] = SkyNet_on_Akash
+data['moniker'] = moniker
 
 seeds_str = ','.join(seeds)
 for seed in seeds:
